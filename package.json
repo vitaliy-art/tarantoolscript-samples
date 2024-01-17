@@ -4,14 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "tstl",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "workspaces": [
-    "samples/box"
-  ],
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.19.0",
     "eslint": "^8.56.0",

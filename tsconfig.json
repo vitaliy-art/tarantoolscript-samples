@@ -1,6 +1,32 @@
 {
-    "files": [],
-    "references": [
-        { "path": "samples/box" }
-    ]
+    "$schema": "https://raw.githubusercontent.com/TypeScriptToLua/TypeScriptToLua/master/tsconfig-schema.json",
+
+    "compilerOptions": {
+      "incremental": true,
+      "target": "ESNext",
+      "module": "commonjs",
+      "sourceMap": false,
+      "strict": true,
+      "moduleResolution": "Node10",
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "skipDefaultLibCheck": true,
+      "lib": ["ESNext"],
+      "outDir": "build",
+
+      "types": [
+        "lua-types/5.4"
+      ],
+
+      "composite": true
+    },
+
+    "tstl": {
+      "luaTarget": "JIT",
+      "buildMode": "default",
+      "sourceMapTraceback": false,
+      "noImplicitGlobalVariables": true,
+      "tstlVerbose": true
+    }
 }
