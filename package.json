@@ -14,7 +14,7 @@
     "@typescript-eslint/eslint-plugin": "^6.19.0",
     "eslint": "^8.56.0",
     "lua-types": "^2.13.1",
-    "tarantoolscript": "^0.2.5",
+    "tarantoolscript": "^0.2.9",
     "typescript-to-lua": "^1.23.0"
   }
 }
