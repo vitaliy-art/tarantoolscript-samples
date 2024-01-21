@@ -19,7 +19,11 @@
         "lua-types/5.4"
       ],
 
-      "composite": true
+      "composite": true,
+      "baseUrl": "./node_modules",
+      "paths": {
+        "msgpack": ["tarantoolscript/src/msgpack.d.ts"]
+      },
     },
 
     "tstl": {
@@ -27,6 +31,9 @@
       "buildMode": "default",
       "sourceMapTraceback": false,
       "noImplicitGlobalVariables": true,
-      "tstlVerbose": true
+      "tstlVerbose": true,
+      "noResolvePaths": [
+        "msgpack"
+      ]
     }
 }
