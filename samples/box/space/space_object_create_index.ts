@@ -1,6 +1,6 @@
 // https://www.tarantool.io/en/doc/latest/reference/reference_lua/box_space/create_index/
 
-import { Box, FieldType, IndexOptionsParts, Parts, SpaceObject } from 'tarantoolscript';
+import { Box, FieldType, IndexOptionsParts, SpaceObject } from 'tarantoolscript';
 
 declare const box: Box;
 
