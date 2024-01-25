@@ -6,11 +6,11 @@ declare const box: Box;
 
 function function_for_before_replace(this: void, old?: TupleObject, new_?: TupleObject) {
     if (!(old) && new_ && new_[3] == 'space_name' && new_[4] != 'vinyl') {
-        return new_.update([{
-            1: '=',
-            2: 4,
-            3: 'vinyl'
-        }]);
+        return new_.update([[
+            '=',
+            4,
+            'vinyl'
+        ]]);
     }
 }
 
