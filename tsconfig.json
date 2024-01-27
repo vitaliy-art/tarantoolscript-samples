@@ -21,7 +21,8 @@
 
       "baseUrl": "./node_modules",
       "paths": {
-        "msgpack": ["tarantoolscript/src/msgpack.d.ts"]
+        "msgpack": ["tarantoolscript/src/msgpack.d.ts"],
+        "buffer": ["tarantoolscript/src/buffer.d.ts"]
       },
     },
 
