@@ -33,7 +33,8 @@
       "noImplicitGlobalVariables": true,
       "tstlVerbose": true,
       "noResolvePaths": [
-        "msgpack"
+        "msgpack",
+        "buffer"
       ]
     }
 }
