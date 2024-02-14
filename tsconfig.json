@@ -21,9 +21,10 @@
 
       "baseUrl": "./node_modules",
       "paths": {
-        "msgpack": ["tarantoolscript/src/msgpack.d.ts"],
-        "buffer": ["tarantoolscript/src/buffer.d.ts"]
-      },
+        "buffer": ["tarantoolscript/src/buffer.d.ts"],
+        "luatest": ["tarantoolscript/src/luatest.d.ts"],
+        "msgpack": ["tarantoolscript/src/msgpack.d.ts"]
+      }
     },
 
     "tstl": {
@@ -33,8 +34,9 @@
       "noImplicitGlobalVariables": true,
       "tstlVerbose": true,
       "noResolvePaths": [
-        "msgpack",
-        "buffer"
+        "buffer",
+        "luatest",
+        "msgpack"
       ]
     }
 }
