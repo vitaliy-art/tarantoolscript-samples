@@ -22,6 +22,7 @@
       "baseUrl": "./node_modules",
       "paths": {
         "buffer": ["tarantoolscript/src/buffer.d.ts"],
+        "log": ["tarantoolscript/src/log.d.ts"],
         "luatest": ["tarantoolscript/src/luatest.d.ts"],
         "luatest.helpers": ["tarantoolscript/src/luatest.helpers.d.ts"],
         "luatest.replica_set": ["tarantoolscript/src/luatest.replica_set.d.ts"],
@@ -39,6 +40,7 @@
       "tstlVerbose": true,
       "noResolvePaths": [
         "buffer",
+        "log",
         "luatest",
         "luatest.helpers",
         "luatest.replica_set",
