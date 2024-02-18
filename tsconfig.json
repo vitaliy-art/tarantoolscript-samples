@@ -23,6 +23,10 @@
       "paths": {
         "buffer": ["tarantoolscript/src/buffer.d.ts"],
         "luatest": ["tarantoolscript/src/luatest.d.ts"],
+        "luatest.helpers": ["tarantoolscript/src/luatest.helpers.d.ts"],
+        "luatest.replica_set": ["tarantoolscript/src/luatest.replica_set.d.ts"],
+        "luatest.runner": ["tarantoolscript/src/luatest.runner.d.ts"],
+        "luatest.server": ["tarantoolscript/src/luatest.server.d.ts"],
         "msgpack": ["tarantoolscript/src/msgpack.d.ts"]
       }
     },
@@ -36,6 +40,10 @@
       "noResolvePaths": [
         "buffer",
         "luatest",
+        "luatest.helpers",
+        "luatest.replica_set",
+        "luatest.runner",
+        "luatest.server",
         "msgpack"
       ]
     }
