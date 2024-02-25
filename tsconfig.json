@@ -22,6 +22,7 @@
       "baseUrl": "./node_modules",
       "paths": {
         "buffer": ["tarantoolscript/src/buffer.d.ts"],
+        "clock": ["tarantoolscript/src/clock.d.ts"],
         "csv": ["tarantoolscript/src/csv.d.ts"],
         "log": ["tarantoolscript/src/log.d.ts"],
         "luatest": ["tarantoolscript/src/luatest.d.ts"],
@@ -42,6 +43,7 @@
       "tstlVerbose": true,
       "noResolvePaths": [
         "buffer",
+        "clock",
         "csv",
         "log",
         "luatest",
