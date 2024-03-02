@@ -34,7 +34,8 @@
         "luatest.runner": ["tarantoolscript/src/luatest.runner.d.ts"],
         "luatest.server": ["tarantoolscript/src/luatest.server.d.ts"],
         "msgpack": ["tarantoolscript/src/msgpack.d.ts"],
-        "uuid": ["tarantoolscript/src/uuid.d.ts"]
+        "uuid": ["tarantoolscript/src/uuid.d.ts"],
+        "yaml": ["tarantoolscript/src/yaml.d.ts"]
       }
     },
 
@@ -58,7 +59,8 @@
         "luatest.runner",
         "luatest.server",
         "msgpack",
-        "uuid"
+        "uuid",
+        "yaml"
       ]
     }
 }
