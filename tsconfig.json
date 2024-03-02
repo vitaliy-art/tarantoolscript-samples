@@ -35,6 +35,7 @@
         "luatest.server": ["tarantoolscript/src/luatest.server.d.ts"],
         "msgpack": ["tarantoolscript/src/msgpack.d.ts"],
         "uuid": ["tarantoolscript/src/uuid.d.ts"],
+        "xlog": ["tarantoolscript/src/xlog.d.ts"],
         "yaml": ["tarantoolscript/src/yaml.d.ts"]
       }
     },
@@ -60,6 +61,7 @@
         "luatest.server",
         "msgpack",
         "uuid",
+        "xlog",
         "yaml"
       ]
     }
