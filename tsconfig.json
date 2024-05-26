@@ -40,6 +40,7 @@
         "metrics.plugins.json": ["tarantoolscript/src/metrics.plugins.json.d.ts"],
         "msgpack": ["tarantoolscript/src/msgpack.d.ts"],
         "queue": ["tarantoolscript/src/queue.d.ts"],
+        "string": ["tarantoolscript/src/string.d.ts"],
         "uuid": ["tarantoolscript/src/uuid.d.ts"],
         "xlog": ["tarantoolscript/src/xlog.d.ts"],
         "yaml": ["tarantoolscript/src/yaml.d.ts"]
@@ -72,6 +73,7 @@
         "metrics.plugins.json",
         "msgpack",
         "queue",
+        "string",
         "uuid",
         "xlog",
         "yaml"
