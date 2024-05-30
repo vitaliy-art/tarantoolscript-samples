@@ -43,6 +43,7 @@
         "queue": ["tarantoolscript/src/queue.d.ts"],
         "strict": ["tarantoolscript/src/strict.d.ts"],
         "string": ["tarantoolscript/src/string.d.ts"],
+        "tarantool": ["tarantoolscript/src/tarantool.d.ts"],
         "uuid": ["tarantoolscript/src/uuid.d.ts"],
         "xlog": ["tarantoolscript/src/xlog.d.ts"],
         "yaml": ["tarantoolscript/src/yaml.d.ts"]
@@ -78,6 +79,7 @@
         "queue",
         "strict",
         "string",
+        "tarantool",
         "uuid",
         "xlog",
         "yaml"
