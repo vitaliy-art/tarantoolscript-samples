@@ -1,92 +1,150 @@
 {
     "$schema": "https://raw.githubusercontent.com/TypeScriptToLua/TypeScriptToLua/master/tsconfig-schema.json",
-
     "compilerOptions": {
-      "incremental": true,
-      "target": "ESNext",
-      "module": "commonjs",
-      "sourceMap": false,
-      "strict": true,
-      "moduleResolution": "Node10",
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true,
-      "skipDefaultLibCheck": true,
-      "lib": ["ESNext"],
-      "outDir": "build",
-
-      "types": [
-        "lua-types/5.4"
-      ],
-
-      "baseUrl": "./node_modules",
-      "paths": {
-        "buffer": ["tarantoolscript/src/buffer.d.ts"],
-        "clock": ["tarantoolscript/src/clock.d.ts"],
-        "csv": ["tarantoolscript/src/csv.d.ts"],
-        "datetime": ["tarantoolscript/src/datetime.d.ts"],
-        "fiber": ["tarantoolscript/src/fiber.d.ts"],
-        "fio": ["tarantoolscript/src/fio.d.ts"],
-        "http.client": ["tarantoolscript/src/http.client.d.ts"],
-        "http.server": ["tarantoolscript/src/http.server.d.ts"],
-        "iconv": ["tarantoolscript/src/iconv.d.ts"],
-        "json": ["tarantoolscript/src/json.d.ts"],
-        "key_def": ["tarantoolscript/src/key_def.d.ts"],
-        "log": ["tarantoolscript/src/log.d.ts"],
-        "luatest": ["tarantoolscript/src/luatest.d.ts"],
-        "luatest.helpers": ["tarantoolscript/src/luatest.helpers.d.ts"],
-        "luatest.replica_set": ["tarantoolscript/src/luatest.replica_set.d.ts"],
-        "luatest.runner": ["tarantoolscript/src/luatest.runner.d.ts"],
-        "luatest.server": ["tarantoolscript/src/luatest.server.d.ts"],
-        "metrics": ["tarantoolscript/src/metrics.d.ts"],
-        "metrics.plugins.json": ["tarantoolscript/src/metrics.plugins.json.d.ts"],
-        "msgpack": ["tarantoolscript/src/msgpack.d.ts"],
-        "os": ["tarantoolscript/src/os.d.ts"],
-        "queue": ["tarantoolscript/src/queue.d.ts"],
-        "strict": ["tarantoolscript/src/strict.d.ts"],
-        "string": ["tarantoolscript/src/string.d.ts"],
-        "tarantool": ["tarantoolscript/src/tarantool.d.ts"],
-        "uuid": ["tarantoolscript/src/uuid.d.ts"],
-        "xlog": ["tarantoolscript/src/xlog.d.ts"],
-        "yaml": ["tarantoolscript/src/yaml.d.ts"]
-      }
+        "incremental": true,
+        "target": "ESNext",
+        "module": "commonjs",
+        "sourceMap": false,
+        "strict": true,
+        "moduleResolution": "Node10",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "skipDefaultLibCheck": true,
+        "lib": [
+            "ESNext"
+        ],
+        "outDir": "build",
+        "types": [
+            "lua-types/5.4"
+        ],
+        "baseUrl": "./node_modules",
+        "paths": {
+            "buffer": [
+                "tarantoolscript/src/buffer.d.ts"
+            ],
+            "clock": [
+                "tarantoolscript/src/clock.d.ts"
+            ],
+            "csv": [
+                "tarantoolscript/src/csv.d.ts"
+            ],
+            "datetime": [
+                "tarantoolscript/src/datetime.d.ts"
+            ],
+            "fiber": [
+                "tarantoolscript/src/fiber.d.ts"
+            ],
+            "fio": [
+                "tarantoolscript/src/fio.d.ts"
+            ],
+            "http.client": [
+                "tarantoolscript/src/http.client.d.ts"
+            ],
+            "http.server": [
+                "tarantoolscript/src/http.server.d.ts"
+            ],
+            "iconv": [
+                "tarantoolscript/src/iconv.d.ts"
+            ],
+            "json": [
+                "tarantoolscript/src/json.d.ts"
+            ],
+            "key_def": [
+                "tarantoolscript/src/key_def.d.ts"
+            ],
+            "log": [
+                "tarantoolscript/src/log.d.ts"
+            ],
+            "luatest": [
+                "tarantoolscript/src/luatest.d.ts"
+            ],
+            "luatest.helpers": [
+                "tarantoolscript/src/luatest.helpers.d.ts"
+            ],
+            "luatest.replica_set": [
+                "tarantoolscript/src/luatest.replica_set.d.ts"
+            ],
+            "luatest.runner": [
+                "tarantoolscript/src/luatest.runner.d.ts"
+            ],
+            "luatest.server": [
+                "tarantoolscript/src/luatest.server.d.ts"
+            ],
+            "metrics": [
+                "tarantoolscript/src/metrics.d.ts"
+            ],
+            "metrics.plugins.json": [
+                "tarantoolscript/src/metrics.plugins.json.d.ts"
+            ],
+            "msgpack": [
+                "tarantoolscript/src/msgpack.d.ts"
+            ],
+            "os": [
+                "tarantoolscript/src/os.d.ts"
+            ],
+            "queue": [
+                "tarantoolscript/src/queue.d.ts"
+            ],
+            "strict": [
+                "tarantoolscript/src/strict.d.ts"
+            ],
+            "string": [
+                "tarantoolscript/src/string.d.ts"
+            ],
+            "table": [
+                "tarantoolscript/src/table.d.ts"
+            ],
+            "tarantool": [
+                "tarantoolscript/src/tarantool.d.ts"
+            ],
+            "uuid": [
+                "tarantoolscript/src/uuid.d.ts"
+            ],
+            "xlog": [
+                "tarantoolscript/src/xlog.d.ts"
+            ],
+            "yaml": [
+                "tarantoolscript/src/yaml.d.ts"
+            ]
+        }
     },
-
     "tstl": {
-      "luaTarget": "JIT",
-      "buildMode": "default",
-      "sourceMapTraceback": false,
-      "noImplicitGlobalVariables": true,
-      "tstlVerbose": true,
-      "noResolvePaths": [
-        "buffer",
-        "clock",
-        "csv",
-        "datetime",
-        "fiber",
-        "fio",
-        "http.client",
-        "http.server",
-        "iconv",
-        "json",
-        "key_def",
-        "log",
-        "luatest",
-        "luatest.helpers",
-        "luatest.replica_set",
-        "luatest.runner",
-        "luatest.server",
-        "metrics",
-        "metrics.plugins.json",
-        "msgpack",
-        "os",
-        "queue",
-        "strict",
-        "string",
-        "tarantool",
-        "uuid",
-        "xlog",
-        "yaml"
-      ]
+        "luaTarget": "JIT",
+        "buildMode": "default",
+        "sourceMapTraceback": false,
+        "noImplicitGlobalVariables": true,
+        "tstlVerbose": true,
+        "noResolvePaths": [
+            "buffer",
+            "clock",
+            "csv",
+            "datetime",
+            "fiber",
+            "fio",
+            "http.client",
+            "http.server",
+            "iconv",
+            "json",
+            "key_def",
+            "log",
+            "luatest",
+            "luatest.helpers",
+            "luatest.replica_set",
+            "luatest.runner",
+            "luatest.server",
+            "metrics",
+            "metrics.plugins.json",
+            "msgpack",
+            "os",
+            "queue",
+            "strict",
+            "string",
+            "table",
+            "tarantool",
+            "uuid",
+            "xlog",
+            "yaml"
+        ]
     }
 }
