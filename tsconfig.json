@@ -80,6 +80,9 @@
             "msgpack": [
                 "tarantoolscript/src/msgpack.d.ts"
             ],
+            "net.box": [
+                "tarantoolscript/src/net.box.d.ts"
+            ],
             "os": [
                 "tarantoolscript/src/os.d.ts"
             ],
@@ -136,6 +139,7 @@
             "metrics",
             "metrics.plugins.json",
             "msgpack",
+            "net.box",
             "os",
             "queue",
             "strict",
