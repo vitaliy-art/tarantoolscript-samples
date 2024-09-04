@@ -32,6 +32,9 @@
             "datetime": [
                 "tarantoolscript/src/datetime.d.ts"
             ],
+            "digest": [
+                "tarantoolscript/src/digest.d.ts"
+            ],
             "fiber": [
                 "tarantoolscript/src/fiber.d.ts"
             ],
@@ -123,6 +126,7 @@
             "clock",
             "csv",
             "datetime",
+            "digest",
             "fiber",
             "fio",
             "http.client",
