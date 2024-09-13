@@ -112,6 +112,12 @@
             ],
             "yaml": [
                 "tarantoolscript/src/yaml.d.ts"
+            ],
+            "checks": [
+                "tarantoolscript/src/checks.d.ts"
+            ],
+            "decimal": [
+                "tarantoolscript/src/decimal.d.ts"
             ]
         }
     },
@@ -152,7 +158,9 @@
             "tarantool",
             "uuid",
             "xlog",
-            "yaml"
+            "yaml",
+            "checks",
+            "decimal"
         ]
     }
 }

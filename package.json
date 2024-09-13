@@ -13,7 +13,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.19.0",
     "eslint": "^8.56.0",
-    "tarantoolscript": "^0.25.3",
+    "tarantoolscript": "^0.28.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.2.2",
     "typescript-to-lua": "^1.24.1"
