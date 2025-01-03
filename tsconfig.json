@@ -18,6 +18,7 @@
         "paths": {
             "buffer": ["tarantoolscript/src/buffer.d.ts"],
             "clock": ["tarantoolscript/src/clock.d.ts"],
+            "crypto": ["tarantoolscript/src/crypto.d.ts"],
             "csv": ["tarantoolscript/src/csv.d.ts"],
             "datetime": ["tarantoolscript/src/datetime.d.ts"],
             "digest": ["tarantoolscript/src/digest.d.ts"],
