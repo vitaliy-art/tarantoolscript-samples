@@ -88,7 +88,7 @@ conn = net_box.connect(URI);
 import * as log from 'log';
 const w = conn.watch('foo', (key, value) => {
     assert(key == 'foo');
-    log.info("The box.id value is '%d'", value);
+    log.info('The box.id value is \'%d\'', value);
 });
 // If you don’t need the watcher anymore, you can unregister it using the command below:
 w.unregister();
@@ -96,7 +96,7 @@ w.unregister();
 // Example 2
 conn = net_box.connect('127.0.0.1:4401');
 conn.watch('config.storage:/myapp/config/all', (key, value) => {
-    log.info("Configuration stored by the 'myapp/config/all' key is changed");
+    log.info('Configuration stored by the \'myapp/config/all\' key is changed');
 });
 
 // https://www.tarantool.io/en/doc/latest/reference/reference_lua/net_box/#lua-function.conn.request

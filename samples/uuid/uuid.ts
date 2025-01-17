@@ -5,21 +5,23 @@ import * as uuid from 'uuid';
 
 declare const box: Box;
 
-
 // For example, to create such index for a space named test, say:
-box.space.get('test').create_index('pk', { parts: [{ field: 1, type: 'uuid' }] });
+box.space
+    .get('test')
+    .create_index('pk', { parts: [{ field: 1, type: 'uuid' }] });
 
 // Now you can insert UUIDs into the space:
 box.space.get('test').insert([uuid.new_()]);
 // - [e631fdcc-0e8a-4d2f-83fd-b0ce6762b13f]
 
-box.space.get('test').insert([uuid.fromstr('64d22e4d-ac92-4a23-899a-e59f34af5479')]);
+box.space
+    .get('test')
+    .insert([uuid.fromstr('64d22e4d-ac92-4a23-899a-e59f34af5479')]);
 // - [64d22e4d-ac92-4a23-899a-e59f34af5479]
 
 box.space.get('test').select();
 // - - [64d22e4d-ac92-4a23-899a-e59f34af5479]
 //   - [e631fdcc-0e8a-4d2f-83fd-b0ce6762b13f]
-
 
 // Example:
 uuid.__call();
@@ -33,9 +35,11 @@ uuid.str();
 
 const uu = uuid.__call();
 
+// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 uu.bin().length;
 // - 16
 
+// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 uu.str().length;
 // - 36
 

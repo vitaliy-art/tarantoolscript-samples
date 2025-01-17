@@ -14,4 +14,5 @@ for (const i of $range(0, box.space.get('tester').index.length())) {
 print(counter);
 
 // checking the type of index 'primary'
+// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 box.space.get('tester').index.get('primary').type;

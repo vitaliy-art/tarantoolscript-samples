@@ -2,6 +2,7 @@
 
 import * as tarantool from 'tarantool';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 tarantool;
 // - build:
 //     test_build: false

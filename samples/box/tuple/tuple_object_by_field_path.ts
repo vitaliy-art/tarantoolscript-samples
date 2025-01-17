@@ -14,5 +14,6 @@ const pk = s.create_index('pk');
 const field2_value = [1, 'ABC', { key: 'Hello', value: 'world' }];
 const t = s.replace([1, field2_value]);
 
-t['[2][3][\'key\']'];
+// eslint-disable-next-line @typescript-eslint/no-unused-expressions, quotes
+t["[2][3]['key']"];
 // - Hello

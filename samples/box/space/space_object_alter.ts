@@ -10,6 +10,7 @@ const format: SpaceFieldFormat[] = [{ name: 'field1', type: 'unsigned' }];
 
 s.alter({ name: 'tester1', format: format });
 
+// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 s.name;
 // - tester1
 

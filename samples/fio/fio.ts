@@ -3,27 +3,21 @@
 import * as fio from 'fio';
 import * as buffer from 'buffer';
 
-
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.fio.pathjoin
 fio.pathjoin('/etc/', 'default', 'myfile'); // /etc/default/myfile
-
 
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.fio.basename
 fio.basename('/path/to/my.lua', '.lua'); // my
 fio.basename('/path/to/'); //
 
-
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.fio.dirname
 fio.dirname('/path/to/my.lua'); // '/path/to/'
-
 
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.fio.abspath
 fio.abspath('my.lua'); // '/path/to/my.lua'
 
-
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.fio.umask
 fio.umask(tonumber('755', 8)!); // 493
-
 
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.fio.stat
 fio.lstat('/etc');
@@ -41,25 +35,20 @@ fio.lstat('/etc');
 //   dev: 2049
 //   blocks: 24
 
-
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.fio.mkdir
 fio.mkdir('/etc'); // false
-
 
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.fio.chdir
 fio.chdir('/etc'); // true
 
-
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.fio.listdir
 fio.listdir('/usr/lib/tarantool'); // - - mysql
-
 
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.fio.glob
 fio.glob('/etc/x*');
 // - - /etc/xdg
 //   - /etc/xml
 //   - /etc/xul-ext
-
 
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.fio.tempdir
 fio.tempdir(); // - /tmp/lG31e7
@@ -68,67 +57,53 @@ fio.mkdir('./mytmp'); // - true
 // os.setenv('TMPDIR', './mytmp');
 fio.tempdir(); // - ./mytmp/506Z0b
 
-
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.fio.cwd
 fio.cwd(); // - /home/username/tarantool_sandbox
-
 
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.fio.copytree
 fio.copytree('/home/original', '/home/arghives'); // - true
 
-
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.fio.mktree
 fio.mktree('/home/archives'); // - true
 
-
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.fio.rmtree
 fio.rmtree('/home/archives'); // - true
-
 
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.fio.link
 fio.link('/home/username/tmp.txt', '/home/username/tmp.txt2'); // - true
 fio.unlink('/home/username/tmp.txt2'); // - true
 
-
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.fio.link
 fio.rename('/home/username/tmp.txt', '/home/username/tmp.txt2'); // - true
-
 
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.fio.utime
 fio.utime('/home/username/tmp.txt'); // - true
 
-
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.fio.copyfile
 fio.copyfile('/home/username/tmp.txt', 'home/username/tmp.txt2'); // - true
-
 
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.fio.chown
 fio.chmod('/home/username/tmp.txt', tonumber('0755', 8)!); // - true
 fio.chown('/home/username/tmp.txt', 'username', 'username'); // - true
 
-
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.fio.truncate
 fio.truncate('/home/username/tmp.txt', 99999); // - true
-
 
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.fio.sync
 fio.sync(); // - true
 
-
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.fio.open
 const [fh] = fio.open('/home/username/tmp.txt', ['O_RDWR', 'O_APPEND']);
+// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 fh; // - fh: 11
 fio.open('x.txt', ['O_WRONLY', 'O_CREAT'], tonumber('644', 8)); // - fh: 12
-
 
 if (!fh) {
     throw 'error';
 }
 
-
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.file-handle.close
 fh.close();
-
 
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.file-handle.pread
 fh.pread(25, 25);
@@ -136,11 +111,9 @@ fh.pread(25, 25);
 //   elete from t8//
 //   insert in
 
-
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.file-handle.pwrite
 let ibuf = buffer.ibuf();
 fh.pwrite(ibuf, 1, 0); // - true
-
 
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.file-handle.read
 ibuf = buffer.ibuf();
@@ -148,19 +121,15 @@ fh.read(ibuf.reserve(5), 5); // - 5
 /** @todo implement module ffi */
 // ffi.string(ibuf.alloc(5), 5); // - abcde
 
-
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.file-handle.write
 fh.write('new data'); // - true
 fh.write(ibuf, 1); // - true
 
-
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.file-handle.truncate
 fh.truncate(0); // - true
 
-
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.file-handle.seek
 fh.seek(20, 'SEEK_SET'); // - 20
-
 
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.file-handle.stat
 fh.stat();
@@ -178,12 +147,11 @@ fh.stat();
 //   dev: 2049
 //   blocks: 8
 
-
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-function.file-handle.fdatasync
 fh.fdatasync(); // - true
 
-
 // https://www.tarantool.io/ru/doc/latest/reference/reference_lua/fio/#lua-data.fio.c
+// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 fio.c;
 // - seek:
 //     SEEK_SET: 0

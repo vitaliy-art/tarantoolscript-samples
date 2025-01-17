@@ -12,5 +12,6 @@ const s = box.schema.space.create('test', { format: format });
 const pk = s.create_index('pk');
 const t = s.replace([1, 'Я']);
 
+// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 t['field2'];
 // - Я

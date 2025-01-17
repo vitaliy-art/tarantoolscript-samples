@@ -12,5 +12,6 @@ for (const [k, v] of t.pairs()) {
     tmp += v;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 tmp;
 // - Fld#1Fld#2Fld#3Fld#4Fld#5
