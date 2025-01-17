@@ -1,6 +1,4 @@
 {
-    "cSpell.words": [
-        "tarantool",
-        "tarantoolscript"
-    ]
+    "cSpell.words": ["tarantool", "tarantoolscript"],
+    "editor.formatOnSave": true
 }
