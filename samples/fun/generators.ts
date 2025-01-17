@@ -1,6 +1,6 @@
 // https://luafun.github.io/generators.html
 
-import * as fun from "fun";
+import * as fun from 'fun';
 
 // https://luafun.github.io/generators.html#fun.range
 for (const [_it, v] of fun.range(5)) {
@@ -81,19 +81,19 @@ for (const [_it, v] of fun.range(0, 10, 0)) {
 // error: step must not be zero
 
 // https://luafun.github.io/generators.html#fun.duplicate
-fun.each(print, fun.take(3, fun.duplicate("a", "b", "c")));
+fun.each(print, fun.take(3, fun.duplicate('a', 'b', 'c')));
 // a       b       c
 // a       b       c
 // a       b       c
 
-fun.each(print, fun.take(3, fun.duplicate("x")));
+fun.each(print, fun.take(3, fun.duplicate('x')));
 // x
 // x
 // x
 
 for (const [_it, a, b, c, d, e] of fun.take(
     3,
-    fun.duplicate(1, 2, "a", 3, "b")
+    fun.duplicate(1, 2, 'a', 3, 'b')
 )) {
     print(a, b, c, d, e);
 }
@@ -106,7 +106,7 @@ fun.each(
     print,
     fun.take(
         5,
-        fun.tabulate((x) => $multi("a", "b", 2 * x))
+        fun.tabulate((x) => $multi('a', 'b', 2 * x))
     )
 );
 // a       b       0

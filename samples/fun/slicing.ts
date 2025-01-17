@@ -1,6 +1,6 @@
 // https://luafun.github.io/slicing.html#fun.nth
 
-import * as fun from "fun";
+import * as fun from 'fun';
 
 // https://luafun.github.io/slicing.html#fun.nth
 print(...fun.nth(2, fun.range(5)));
@@ -9,17 +9,17 @@ print(...fun.nth(2, fun.range(5)));
 print(...fun.nth(10, fun.range(5)));
 // nil
 
-print(fun.nth(2, ["a", "b", "c", "d", "e"]));
+print(fun.nth(2, ['a', 'b', 'c', 'd', 'e']));
 // b
 
-print(...fun.nth(2, fun.drop_n(3, ["a", "b", "c", "d", "e"])));
+print(...fun.nth(2, fun.drop_n(3, ['a', 'b', 'c', 'd', 'e'])));
 // e
 
-print(...fun.nth(2, fun.enumerate(["a", "b", "c", "d", "e"])));
+print(...fun.nth(2, fun.enumerate(['a', 'b', 'c', 'd', 'e'])));
 // 2 b
 
 // https://luafun.github.io/slicing.html#fun.head
-print(fun.head(["a", "b", "c", "d", "e"]));
+print(fun.head(['a', 'b', 'c', 'd', 'e']));
 // a
 
 print(fun.head([]));
@@ -28,11 +28,11 @@ print(fun.head([]));
 print(...fun.head(fun.range(0)));
 // error: head: iterator is empty
 
-print(...fun.head(fun.enumerate(["a", "b"])));
+print(...fun.head(fun.enumerate(['a', 'b'])));
 // 1 a
 
 // https://luafun.github.io/slicing.html#fun.tail
-fun.each(print, fun.tail(["a", "b", "c", "d", "e"]));
+fun.each(print, fun.tail(['a', 'b', 'c', 'd', 'e']));
 // b
 // c
 // d
@@ -40,7 +40,7 @@ fun.each(print, fun.tail(["a", "b", "c", "d", "e"]));
 
 fun.each(print, fun.tail([]));
 fun.each(print, fun.tail(fun.range(0)));
-fun.each(print, fun.tail(fun.enumerate(["a", "b", "c"])));
+fun.each(print, fun.tail(fun.enumerate(['a', 'b', 'c'])));
 // 2 b
 // 3 c
 
@@ -52,7 +52,7 @@ fun.each(print, fun.take_n(5, fun.range(10)));
 // 4
 // 5
 
-fun.each(print, fun.take_n(5, fun.enumerate(fun.duplicate("x"))));
+fun.each(print, fun.take_n(5, fun.enumerate(fun.duplicate('x'))));
 // 1 x
 // 2 x
 // 3 x
@@ -83,7 +83,7 @@ fun.each(print, fun.drop_n(2, fun.range(5)));
 // 4
 // 5
 
-fun.each(print, fun.drop_n(2, fun.enumerate(["a", "b", "c", "d", "e"])));
+fun.each(print, fun.drop_n(2, fun.enumerate(['a', 'b', 'c', 'd', 'e'])));
 // 3       c
 // 4       d
 // 5       e

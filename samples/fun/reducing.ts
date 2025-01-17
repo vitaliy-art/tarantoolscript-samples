@@ -21,7 +21,7 @@ import {
     tomap,
     totable,
     zip,
-} from "fun";
+} from 'fun';
 
 // https://luafun.github.io/reducing.html#fun.foldl
 print(foldl((acc: number, x) => acc + x, 0, range(5)));
@@ -40,10 +40,10 @@ print(
 // 20
 
 // https://luafun.github.io/reducing.html#fun.reduce
-print(length(["a", "b", "c", "d", "e"]));
+print(length(['a', 'b', 'c', 'd', 'e']));
 // 5
 
-print(length(drop_n(3, ["a", "b", "c", "d", "e"])));
+print(length(drop_n(3, ['a', 'b', 'c', 'd', 'e'])));
 // 2
 
 print(length([]));
@@ -53,7 +53,7 @@ print(length(range(0)));
 // 0
 
 // https://luafun.github.io/reducing.html#fun.totable
-let tab = totable("abcdef");
+let tab = totable('abcdef');
 print(type(tab), tab.length);
 // table 6
 each(print, tab);
@@ -65,7 +65,7 @@ each(print, tab);
 // f
 
 // https://luafun.github.io/reducing.html#fun.tomap
-tab = tomap(zip<number, [number, string]>(range(1, 7), "abcdef"));
+tab = tomap(zip<number, [number, string]>(range(1, 7), 'abcdef'));
 print(type(tab), tab.length);
 // table   6
 each(print, iter(tab));
@@ -77,14 +77,14 @@ each(print, iter(tab));
 // f
 
 // https://luafun.github.io/reducing.html#fun.is_prefix_of
-print(is_prefix_of(["a"], ["a", "b", "c"]));
+print(is_prefix_of(['a'], ['a', 'b', 'c']));
 // true
 
 print(is_prefix_of(range(6), range(5)));
 // false
 
 // https://luafun.github.io/reducing.html#fun.is_null
-print(is_null(["a", "b", "c", "d", "e"]));
+print(is_null(['a', 'b', 'c', 'd', 'e']));
 // false
 
 print(is_null([]));
@@ -119,7 +119,7 @@ print(product(range(1, 5)));
 print(min(range(1, 10, 1)));
 // 1
 
-print(min(["f", "d", "c", "d", "e"]));
+print(min(['f', 'd', 'c', 'd', 'e']));
 // c
 
 print(min([]));
@@ -140,7 +140,7 @@ print(min_by(min_cmp, range(1, 10, 1)));
 print(max(range(1, 10, 1)));
 // 9
 
-print(max(["f", "d", "c", "d", "e"]));
+print(max(['f', 'd', 'c', 'd', 'e']));
 // f
 
 print(max([]));

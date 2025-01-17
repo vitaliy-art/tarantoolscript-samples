@@ -1,6 +1,6 @@
 // https://luafun.github.io/transformations.html
 
-import { each, enumerate, intersperse, map, range, zip } from "fun";
+import { each, enumerate, intersperse, map, range, zip } from 'fun';
 
 // https://luafun.github.io/transformations.html#fun.map
 each(
@@ -13,7 +13,7 @@ each(
 // 8
 
 function fun(this: void, ...$vararg: unknown[]) {
-    return $multi("map", ...$vararg);
+    return $multi('map', ...$vararg);
 }
 each(print, map(fun, range(4)));
 // map 1
@@ -22,7 +22,7 @@ each(print, map(fun, range(4)));
 // map 4
 
 // https://luafun.github.io/transformations.html#fun.enumerate
-each(print, enumerate(["a", "b", "c", "d", "e"]));
+each(print, enumerate(['a', 'b', 'c', 'd', 'e']));
 // 1 a
 // 2 b
 // 3 c
@@ -32,7 +32,7 @@ each(print, enumerate(["a", "b", "c", "d", "e"]));
 each(
     print,
     enumerate(
-        zip(["one", "two", "three", "four", "five"], ["a", "b", "c", "d", "e"])
+        zip(['one', 'two', 'three', 'four', 'five'], ['a', 'b', 'c', 'd', 'e'])
     )
 );
 // 1 one a
@@ -42,7 +42,7 @@ each(
 // 5 five e
 
 // https://luafun.github.io/transformations.html#fun.intersperse
-each(print, intersperse("x", ["a", "b", "c", "d", "e"]));
+each(print, intersperse('x', ['a', 'b', 'c', 'd', 'e']));
 // a
 // x
 // b

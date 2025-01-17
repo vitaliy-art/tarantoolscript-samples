@@ -6,7 +6,6 @@ import { Box } from 'tarantoolscript';
 
 declare const box: Box;
 
-
 // https://www.tarantool.io/en/doc/latest/reference/reference_lua/fiber/#lua-function.fiber.create
 function greet(this: void, name: string) {
     print('Hello, ' + name);
@@ -14,7 +13,6 @@ function greet(this: void, name: string) {
 
 const greet_fiber = fiber.create(greet, 'John');
 print('Fiber already started');
-
 
 // https://www.tarantool.io/en/doc/latest/reference/reference_lua/fiber/#lua-function.fiber.new
 function greet2(this: void, name: string) {
@@ -24,13 +22,11 @@ function greet2(this: void, name: string) {
 const greet_fiber2 = fiber.new_(greet2, 'John');
 print('Fiber not started yet');
 
-
 // https://www.tarantool.io/en/doc/latest/reference/reference_lua/fiber/#lua-function.fiber.self
 fiber.self();
 // - status: running
 //   name: interactive
 //   id: 101
-
 
 // https://www.tarantool.io/en/doc/latest/reference/reference_lua/fiber/#lua-function.fiber.find
 fiber.find(101);
@@ -38,11 +34,9 @@ fiber.find(101);
 //   name: interactive
 //   id: 101
 
-
 // https://www.tarantool.io/en/doc/latest/reference/reference_lua/fiber/#lua-function.fiber.sleep
 let counter = 0;
 function increment(this: void, period: number) {
-    // eslint-disable-next-line no-constant-condition
     while (true) {
         counter++;
         fiber.sleep(period);
@@ -52,10 +46,8 @@ function increment(this: void, period: number) {
 const increment_fiber = fiber.create(increment, 2);
 increment_fiber.cancel();
 
-
 // https://www.tarantool.io/en/doc/latest/reference/reference_lua/fiber/#lua-function.fiber.yield
 function greet3(this: void) {
-    // eslint-disable-next-line no-constant-condition
     while (true) {
         print('Enter a name:');
         const name = io.read();
@@ -68,7 +60,6 @@ for (const i of $range(1, 2)) {
     const fiber_object = fiber.create(greet3);
     fiber_object.cancel();
 }
-
 
 // https://www.tarantool.io/en/doc/latest/reference/reference_lua/fiber/#lua-function.fiber.set_max_slice
 fiber.set_max_slice({ warn: 1.5, err: 3 });
@@ -84,7 +75,6 @@ const long_operation_fiber = fiber.create(long_operation);
 // fiber has not yielded for more than 1.500 seconds
 // FiberSliceIsExceeded: fiber slice is exceeded
 
-
 // https://www.tarantool.io/en/doc/latest/reference/reference_lua/fiber/#lua-function.fiber.set_slice
 const time2 = clock.monotonic();
 function long_operation2(this: void) {
@@ -98,7 +88,6 @@ const long_operation_fiber2 = fiber.create(long_operation2);
 // Output:
 // fiber has not yielded for more than 1.500 seconds
 // FiberSliceIsExceeded: fiber slice is exceeded
-
 
 // https://www.tarantool.io/en/doc/latest/reference/reference_lua/fiber/#lua-function.fiber.extend_slice
 fiber.set_max_slice({ warn: 1.5, err: 3 });
@@ -115,10 +104,8 @@ const long_operation_fiber3 = fiber.create(long_operation3);
 // fiber has not yielded for more than 2.000 seconds
 // FiberSliceIsExceeded: fiber slice is exceeded
 
-
 // https://www.tarantool.io/en/doc/latest/reference/reference_lua/fiber/#lua-data.fiber_object.storage
 function greet4(this: void) {
-    // eslint-disable-next-line no-constant-condition
     while (true) {
         print('Enter a name:');
         const name = io.read();
@@ -134,7 +121,6 @@ function greet4(this: void) {
 
 const fiber_object2 = fiber.create(greet4);
 
-
 // https://www.tarantool.io/en/doc/latest/reference/reference_lua/fiber/#lua-function.fiber_object.join
 function add(this: void, a: number, b: number): number {
     return a + b;
@@ -146,10 +132,8 @@ const [is_success, result] = add_fiber.join();
 print(`Is successful: ${is_success}`);
 print(`Returned value: ${result}`);
 
-
 // https://www.tarantool.io/en/doc/latest/reference/reference_lua/fiber/#example-of-yield-failure
 function function_name(this: void) {
-    // eslint-disable-next-line no-constant-condition
     while (true) {
         print('before testcancel');
         fiber.testcancel();
@@ -159,14 +143,12 @@ function function_name(this: void) {
 }
 
 const fiber_object3 = fiber.create(function_name);
-fiber.sleep(.1);
+fiber.sleep(0.1);
 fiber_object3.cancel();
-
 
 // https://www.tarantool.io/en/doc/latest/reference/reference_lua/fiber/#example
 const channel = fiber.channel(10);
 function consumer_fiber(this: void) {
-    // eslint-disable-next-line no-constant-condition
     while (true) {
         const task = channel.get();
         // ...
@@ -174,7 +156,6 @@ function consumer_fiber(this: void) {
 }
 
 function consumer2_fiber(this: void) {
-    // eslint-disable-next-line no-constant-condition
     while (true) {
         // 10 seconds
         const task = channel.get(10);
@@ -187,7 +168,6 @@ function consumer2_fiber(this: void) {
 }
 
 function producer_fiber(this: void) {
-    // eslint-disable-next-line no-constant-condition
     while (true) {
         const [task] = box.space.get('some_space').select();
         // ...
@@ -212,7 +192,6 @@ function producer_fiber(this: void) {
 }
 
 function producer2_fiber(this: void) {
-    // eslint-disable-next-line no-constant-condition
     while (true) {
         const [task] = box.space.get('some_other_space').select();
         // 10 seconds

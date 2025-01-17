@@ -1,6 +1,6 @@
 // https://luafun.github.io/basic.html
 
-import * as fun from "fun";
+import * as fun from 'fun';
 
 // https://luafun.github.io/basic.html#fun.iter
 for (const [_it, a] of fun.iter([1, 2, 3])) {
@@ -17,7 +17,7 @@ for (const [_it, k, v] of fun.iter({ a: 1, b: 2, c: 3 })) {
 // a 1
 // c 3
 
-for (const [_it, a] of fun.iter("abcde")) {
+for (const [_it, a] of fun.iter('abcde')) {
     print(a);
 }
 // a

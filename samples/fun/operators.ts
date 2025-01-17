@@ -1,6 +1,6 @@
 // https://luafun.github.io/operators.html
 
-import { operator } from "fun";
+import { operator } from 'fun';
 
 // https://luafun.github.io/operators.html#fun.operator.truediv
 print(operator.div(10, 3));
@@ -43,7 +43,7 @@ print(operator.truth(0));
 // true -- It is Lua, baby!
 print(operator.truth(null));
 // false
-print(operator.truth(""));
+print(operator.truth(''));
 // true
 print(operator.truth({}));
 // true

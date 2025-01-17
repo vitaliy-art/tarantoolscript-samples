@@ -10,7 +10,7 @@ import {
     range,
     take,
     zip,
-} from "fun";
+} from 'fun';
 
 // https://luafun.github.io/filtering.html#fun.filter
 each(
@@ -25,7 +25,7 @@ each(
     print,
     take(
         5,
-        filter((i, x) => i % 3 == 0, enumerate(duplicate("x")))
+        filter((i, x) => i % 3 == 0, enumerate(duplicate('x')))
     )
 );
 // 3       x
@@ -36,25 +36,25 @@ each(
 
 // https://luafun.github.io/filtering.html#fun.grep
 const lines_to_grep = [
-    "Emily",
-    "Chloe",
-    "Megan",
-    "Jessica",
-    "Emma",
-    "Sarah",
-    "Elizabeth",
-    "Sophie",
-    "Olivia",
-    "Lauren",
+    'Emily',
+    'Chloe',
+    'Megan',
+    'Jessica',
+    'Emma',
+    'Sarah',
+    'Elizabeth',
+    'Sophie',
+    'Olivia',
+    'Lauren',
 ];
 
-each(print, grep("^Em", lines_to_grep));
+each(print, grep('^Em', lines_to_grep));
 // --[[test
 // Emily
 // Emma
 // --test]]
 
-each(print, grep("^p", lines_to_grep));
+each(print, grep('^p', lines_to_grep));
 // --[[test
 // --test]]
 
