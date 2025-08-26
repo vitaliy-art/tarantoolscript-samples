@@ -22,6 +22,7 @@ import {
     totable,
     zip,
 } from 'fun';
+import { FunIterator } from 'tarantoolscript';
 
 // https://luafun.github.io/reducing.html#fun.foldl
 print(foldl((acc: number, x) => acc + x, 0, range(5)));
@@ -64,6 +65,14 @@ each(print, tab);
 // e
 // f
 
+const table1 = range(3).totable();
+print(table1[0]);
+// 1
+
+const table2 = iter({ a: 1, b: 2 }).totable();
+print(table2[0]);
+// a
+
 // https://luafun.github.io/reducing.html#fun.tomap
 tab = tomap(zip<number, [number, string]>(range(1, 7), 'abcdef'));
 print(type(tab), tab.length);
@@ -75,6 +84,14 @@ each(print, iter(tab));
 // d
 // e
 // f
+
+const m = range(10).enumerate().tomap();
+print(m.get(1));
+// 1
+
+const m2 = zip<number, [string, number]>('abc', range(1, 4)).tomap();
+print(m2.get('b'));
+// 2
 
 // https://luafun.github.io/reducing.html#fun.is_prefix_of
 print(is_prefix_of(['a'], ['a', 'b', 'c']));
